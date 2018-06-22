@@ -25,3 +25,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 52%;
+  }
+}

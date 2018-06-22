@@ -20,15 +20,17 @@
         font-size: 2.5rem;
         font-weight: $fw-bold;
         
-        padding: .3rem;
+        padding: .4rem;
         margin-left: .65rem;
         border: .4rem solid $color-text-light;
+        border-radius: .2rem;
     }
 
     .lang {
         font-size: $fs-small;
         margin-left: auto;
         margin-right: 2vw;
+        margin-top: .3rem; //align baseline with get in touch button
 
         a {
             transition: all .3s;
@@ -46,7 +48,7 @@
 
         a {
             font-size: $fs-regular;
-            padding: .75rem 1.2rem;
+            padding: 1rem 1.2rem;
             border: 1px solid $color-text-light;
             border-radius: .6rem;
             transition: all .3s;
@@ -55,5 +57,12 @@
                 background-color: $color-dark-trans-light;
             }
         }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .navBar .lang {
+        margin-left: 2.2em;
+        margin-right: auto;        
     }
 }

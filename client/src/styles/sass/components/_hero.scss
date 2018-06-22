@@ -1,4 +1,5 @@
 .hero {
+    background: $color-bg;
     height: 100vh;
 
     display: flex;
@@ -37,6 +38,34 @@
         opacity: .5;
         animation: flyInBottom .45s ease-out;
     }
+}
+
+@media screen and (max-width: 460px) {
+    .hero .hero__description {
+        margin: 0 1rem;
+
+        h1 { 
+            font-size: $fs-large; 
+        }
+
+        p { 
+            font-size: $fs-regular;
+            text-align: left;
+            letter-spacing: .12rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero .hero__description { 
+        h1 { 
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+     }
 }
 
 @keyframes flyInLeft {
