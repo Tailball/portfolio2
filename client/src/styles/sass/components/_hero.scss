@@ -10,7 +10,7 @@
     
     background: linear-gradient(to bottom, $color-main-trans, $color-dark-trans), url('../img/steve-roe-711013-unsplash.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 
     overflow: hidden; //required to avoid scrollbars during animation
 
@@ -33,8 +33,8 @@
 
     .caretDown {
         font-size: $fs-vlarge;
-        margin-top: 5vh;
-        opacity: .6;
+        margin-top: 7.5vh;
+        opacity: .5;
         animation: flyInBottom .45s ease-out;
     }
 }

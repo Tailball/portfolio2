@@ -71,7 +71,7 @@ a {
   color: #e9e9e9;
   background: linear-gradient(to bottom, rgba(41, 128, 185, 0.85), rgba(7, 22, 32, 0.98)), url("../img/steve-roe-711013-unsplash.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   overflow: hidden; }
   .hero__description h1 {
     font-size: 5.3rem;
@@ -86,8 +86,8 @@ a {
     animation: flyInRight .45s ease-out; }
   .hero .caretDown {
     font-size: 5.3rem;
-    margin-top: 5vh;
-    opacity: .6;
+    margin-top: 7.5vh;
+    opacity: .5;
     animation: flyInBottom .45s ease-out; }
 
 @keyframes flyInLeft {
