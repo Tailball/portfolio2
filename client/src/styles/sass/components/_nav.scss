@@ -1,0 +1,59 @@
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    
+    width: 100vw;
+
+    color: $color-text-light;
+    background-color: $color-main-trans-light;
+    font-size: $fs-regular;
+
+    padding: .7rem 0;
+
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: $fw-bold;
+        
+        padding: .3rem;
+        margin-left: .65rem;
+        border: .4rem solid $color-text-light;
+    }
+
+    .lang {
+        font-size: $fs-small;
+        margin-left: auto;
+        margin-right: 2vw;
+
+        a {
+            transition: all .3s;
+
+            &:hover {
+                font-weight: $fw-bold;
+                color: $color-light-alt;
+                border-bottom: 2px solid $color-light-alt;
+            }
+        }
+    }
+
+    .getInTouch {
+        margin-right: 2.2rem;
+
+        a {
+            font-size: $fs-regular;
+            padding: .75rem 1.2rem;
+            border: 1px solid $color-text-light;
+            border-radius: .6rem;
+            transition: all .3s;
+
+            &:hover {
+                background-color: $color-dark-trans-light;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.hero {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $color-text-light;
+    
+    background: linear-gradient(to bottom, $color-main-trans, $color-dark-trans), url('../img/steve-roe-711013-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden; //required to avoid scrollbars during animation
+
+    &__description { 
+        h1 {
+            font-size: $fs-vlarge;
+            margin-bottom: 2.5rem;
+            animation: flyInLeft .45s ease-out;
+        }
+
+        p {
+            font-size:$fs-large;
+            font-weight: $fw-thin;
+            letter-spacing: .17rem;
+            line-height: 1.6;
+            text-align: right;
+            animation: flyInRight .45s ease-out;
+        }
+    }
+
+    .caretDown {
+        font-size: $fs-vlarge;
+        margin-top: 5vh;
+        opacity: .6;
+        animation: flyInBottom .45s ease-out;
+    }
+}
+
+@keyframes flyInLeft {
+    0% { 
+        transform: translateX(-50vw); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes flyInRight {
+    0% { 
+        transform: translateX(50vw); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes flyInBottom {
+    0% { 
+        transform: translateY(50vw); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
