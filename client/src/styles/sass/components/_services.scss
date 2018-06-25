@@ -1,14 +1,12 @@
 .services {
-    width: 95vw;
-    margin: 3vh auto 0 auto;
-
+    width: 100vw;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
 
     color: $color-text-light;
-    background: linear-gradient(to top, $color-main-gradient, $color-dark-alt);
-    
+        
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.7);
@@ -16,25 +14,16 @@
 
 .service {
     padding: 3em;
-    transition: all .3s;
-
+    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 23rem 1fr;
+    
+    background: linear-gradient(to bottom, $color-main-container, $color-main-container);
+    transition: background .5s;
 
     &:hover {
-        background: $color-dark-trans-light;
-    }
-
-    &__GfxDesigner {
-        border-top-left-radius: 1.5rem;
-    }
-
-    &__Webdesigner { }
-    &__WebDeveloper { }
-
-    &__Tutor{
-        border-top-right-radius: 1.5rem;
+        background: linear-gradient(to bottom, $color-main-gradient, $color-main-container);
     }
 
     &__header {
@@ -90,4 +79,40 @@
             }
         }
     }   
+}
+
+@media screen and (max-width: 1615px) {
+    .service { grid-template-rows: 25rem 1fr; }
+}
+
+@media screen and (max-width: 1250px) {
+    .services { 
+        width: 100vw;
+        margin: 0;
+    }
+
+    .service { 
+        grid-template-rows: 30rem 1fr; 
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 1186px) {
+    .services { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service { grid-template-rows: 20rem 1fr; }
+}
+
+@media screen and (max-width: 899px) {
+    .service { grid-template-rows: 23rem 1fr; }
+}
+
+@media screen and (max-width: 700px) {
+    .service { grid-template-rows: 25rem 1fr; }
+}
+
+@media screen and (max-width: 485px) {
+    .services { grid-template-columns: 1fr; }
 }
