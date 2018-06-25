@@ -1,0 +1,55 @@
+.cta {
+    height: 45vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: $color-text-light;
+        width: 35vw;
+        padding: 4vh 10rem;
+        background: linear-gradient(to bottom right, $color-main-container, $color-dark-trans);
+        text-align: center;
+        border-radius: .6rem;
+        transition: transform .075s ease-in, box-shadow .075s ease-in;
+
+        @media screen and (max-width: 577px) {
+            width: 40vw;
+        }
+
+        h2 {
+            color: $color-light-alt;
+            text-transform: uppercase;
+            font-size: $fs-xlarge;
+            font-weight: $fw-thin;
+            letter-spacing: 2px;
+            border-bottom: 1px solid $color-light-alt;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            font-size: $fs-small;
+            font-weight: $fw-regular;
+            line-height: 1.6;
+            letter-spacing: 1.5px;
+            margin-top: 6vh;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.50);
+            transform: translate(.75rem, .75rem);
+        }
+
+        &:hover h2 {
+            font-weight: $fw-bold;
+            color: $color-main-container;
+            border-bottom: 1px solid $color-main-container;
+        }
+
+        &:hover p {
+            color: $color-main-container;
+        }
+    }
+}
