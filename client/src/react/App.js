@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from './components/navbar';
 import Hero from './components/hero';
 import Services from './components/services';
+import Portfolio from './components/portfolio';
 
 class App extends React.Component {
   render() {
@@ -10,9 +11,7 @@ class App extends React.Component {
       <NavBar />
       <Hero />
       <Services />    
-      
-
-      <section className="portfolio" />
+      <Portfolio />
 
       <section className="cta" />
 
