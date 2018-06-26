@@ -1,17 +1,17 @@
 .portfolio {
     width: 100%;
-
     color: $color-text-dark;
-    
     margin-top: 3rem;
+    background-color: white;
 
     h2 {
         font-size: $fs-xlarge;
         font-weight: $fw-regular;
         letter-spacing: 2px;
-
-        margin-top: 6rem;
-        margin-left: 3.5rem;
+        
+        border-bottom: 1px solid $color-border-dark;
+        margin: 8rem 2.5rem 0 2.5rem;
+        padding-bottom: 2.5rem;
 
         @media screen and (max-width: 900px) {
             margin-left: 0;
@@ -25,12 +25,8 @@
 }
 
 .board {
-    background-color: white;
-    
-    border: 1px solid $color-border-dark;
-    border-radius: .2rem;
-    padding: 2rem;
-    margin: 3rem 3rem 0 3rem;
+    padding: 2.5rem;
+    margin: 3rem 6rem 0 3rem;
 
     display: grid;
     grid-template-columns: repeat(7, 1fr);

@@ -6,6 +6,11 @@
     justify-content: center;
     align-items: center;
 
+    background: linear-gradient(to bottom right, $color-light-trans, $color-light-alt-trans), url('../img/pexels-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     a {
         color: $color-text-light;
         width: 35vw;

@@ -12,6 +12,7 @@
     background: linear-gradient(to bottom, $color-main-trans, $color-dark-trans), url('../img/steve-roe-711013-unsplash.jpg');
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
 
     overflow: hidden; //required to avoid scrollbars during animation
 

@@ -39,10 +39,10 @@ class Portfolio extends React.Component {
                 <a className="board__img board__img__9" href={this.albumPosters} target="_blank">
                     <figure />
                 </a>
-                <a className="board__img board__img__10" href={this.albumPosters} target="_blank">>
+                <a className="board__img board__img__10" href={this.albumPosters} target="_blank">
                 <figure />
                 </a>
-                <a className="board__img board__img__11" href={this.albumPosters} target="_blank">>
+                <a className="board__img board__img__11" href={this.albumPosters} target="_blank">
                 <figure />
                 </a>
             </div>
