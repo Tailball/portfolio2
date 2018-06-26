@@ -17,8 +17,8 @@ const Webdesigner = () => {
           <h3>I speak fluent</h3>
           <ul>
             <li>HTML5</li>
-            <li>Javascript ECMA 6</li>
             <li>CSS3 and SASS</li>
+            <li>Javascript ECMA 6</li>
             <li>React and Redux</li>
             <li>jQuery</li>
           </ul>

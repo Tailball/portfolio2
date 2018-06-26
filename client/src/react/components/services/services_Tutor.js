@@ -16,13 +16,14 @@ const Tutor = () => {
     <div className="service__me">
       <h3>I can share my knowledge of</h3>
       <ul>
-        <li>Basic and advanced programming principles, using C#</li>
+        <li>Basic and advanced programming principles</li>
         <li>OOP and SOLID philosophies</li>
+        <li>HTML5, CSS3 with SASS</li>
+        <li>Javascript ES6</li>
+        <li>Node.js, NPM and Express</li>
+        <li>React and Redux</li>
+        <li>C# and VB.NET</li>
         <li>Database modeling and SQL code</li>
-        <li>HTML, CSS, SASS</li>
-        <li>Javascript</li>
-        <li>Node.js Express</li>
-        <li>React</li>
         <li>Ms Office software</li>
         <li>Source control (TFS, GIT)</li>
       </ul>

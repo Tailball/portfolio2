@@ -1,5 +1,5 @@
 .cta {
-    height: 45vh;
+    height: 40vh;
     
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
         color: $color-text-light;
         width: 35vw;
         padding: 4vh 10rem;
-        background: linear-gradient(to bottom right, $color-main-container, $color-dark-trans);
+        background: linear-gradient(to bottom right, $color-main, $color-dark-trans);
         text-align: center;
         border-radius: .6rem;
         transition: transform .075s ease-in, box-shadow .075s ease-in;
@@ -53,12 +53,12 @@
 
         &:hover h2 {
             font-weight: $fw-bold;
-            color: $color-main-container;
-            border-bottom: 1px solid $color-main-container;
+            color: $color-main;
+            border-bottom: 1px solid $color-main;
         }
 
         &:hover p {
-            color: $color-main-container;
+            color: $color-main;
         }
     }
 }

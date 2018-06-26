@@ -27,6 +27,14 @@ a {
   html {
     font-size: 52%; } }
 
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: .4rem;
+  margin-left: .65rem;
+  border: 0.4rem solid #e9e9e9;
+  border-radius: .2rem; }
+
 .navBar {
   position: fixed;
   top: 0;
@@ -40,13 +48,6 @@ a {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: center; }
-  .navBar .logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    padding: .4rem;
-    margin-left: .65rem;
-    border: 0.4rem solid #e9e9e9;
-    border-radius: .2rem; }
   .navBar .lang {
     font-size: 1.3rem;
     margin-left: auto;
@@ -75,7 +76,6 @@ a {
     margin-right: auto; } }
 
 .hero {
-  background: #d4d4d4;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -336,7 +336,7 @@ a {
         transform: scale(1.25); }
 
 .cta {
-  height: 45vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -382,3 +382,119 @@ a {
       border-bottom: 1px solid #1b5478; }
     .cta a:hover p {
       color: #1b5478; }
+
+.about {
+  margin-top: 6.5rem;
+  padding: 4.5rem .65rem 2.5rem .65rem;
+  color: #e9e9e9;
+  background: linear-gradient(to bottom right, rgba(41, 128, 185, 0.85), rgba(7, 22, 32, 0.75)), url("../img/pexels-photo-1142948.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr 30rem;
+  grid-column-gap: 3.5rem; }
+  @media screen and (max-width: 1366px) {
+    .about {
+      background-attachment: scroll;
+      background-position: bottom; } }
+  @media screen and (max-width: 699px) {
+    .about {
+      margin-top: 0; } }
+  .about__description {
+    grid-column: 1 / 2;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: max-content 1fr; }
+    @media screen and (max-width: 1100px) {
+      .about__description {
+        grid-column: 1 / 3; } }
+    .about__description__logo {
+      grid-column: 1 / 2;
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      margin-right: 2rem; }
+      @media screen and (max-width: 806px) {
+        .about__description__logo {
+          display: none; } }
+    .about__description__text {
+      grid-column: 2 / 3;
+      margin-top: -.4rem; }
+      @media screen and (max-width: 806px) {
+        .about__description__text {
+          grid-column: 1 / 3;
+          padding: 0 2rem; } }
+      .about__description__text p {
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.7;
+        letter-spacing: 1px; }
+        .about__description__text p:not(:last-of-type) {
+          margin-bottom: 1.5rem; }
+        .about__description__text p span {
+          font-weight: 700;
+          letter-spacing: .75px; }
+  .about__socialmedia {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    margin-right: 2vw;
+    color: #679fc5;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    border-left: 1px solid #1b5478; }
+    @media screen and (max-width: 1100px) {
+      .about__socialmedia {
+        grid-column: 1 / 3;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+        padding-top: 1.6rem;
+        border-top: 1px solid #1b5478;
+        border-left: none; } }
+    .about__socialmedia a {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1rem; }
+      .about__socialmedia a i {
+        margin-left: 3rem; }
+        @media screen and (max-width: 1100px) {
+          .about__socialmedia a i {
+            margin-left: 1.2rem;
+            font-size: 1.3rem; } }
+        @media screen and (max-width: 490px) {
+          .about__socialmedia a i {
+            margin-left: 1.2rem; } }
+      .about__socialmedia a:hover {
+        color: #e9e9e9;
+        padding-bottom: .9rem;
+        border-bottom: 1px solid #e9e9e9; }
+      @media screen and (max-width: 490px) {
+        .about__socialmedia a:last-of-type {
+          display: none; } }
+  .about__copyright {
+    grid-column: 1 / 3;
+    padding-top: 3.5rem;
+    border-top: 1px solid #1b5478;
+    color: #679fc5;
+    width: 96vw;
+    justify-self: center; }
+    @media screen and (max-width: 1100px) {
+      .about__copyright {
+        border: none;
+        padding-top: 0; } }
+    .about__copyright p {
+      text-align: center;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px; }
+    .about__copyright a {
+      color: #bddcf0; }
+      .about__copyright a:hover {
+        text-decoration: underline; }

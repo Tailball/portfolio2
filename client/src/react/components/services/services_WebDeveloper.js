@@ -16,14 +16,14 @@ const WebDeveloper = () => {
       <div className="service__me">
         <h3>I can implement</h3>
         <ul>
-          <li>Node.js and Express</li>
+          <li>Node.js and NPM</li>
+          <li>Express framework</li>
           <li>MongoDB and Mongoose</li>
           <li>SQL server</li>
-          <li>Heroku</li>
-          <li>Amazon Web Services (AWS)</li>
+          <li>Heroku deployment</li>
         </ul>
       </div>
-    </div>;
+    </div>
 };
 
 export default WebDeveloper;

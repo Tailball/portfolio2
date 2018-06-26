@@ -16,16 +16,6 @@
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
 
-    .logo {
-        font-size: 2.5rem;
-        font-weight: $fw-bold;
-        
-        padding: .4rem;
-        margin-left: .65rem;
-        border: .4rem solid $color-text-light;
-        border-radius: .2rem;
-    }
-
     .lang {
         font-size: $fs-small;
         margin-left: auto;
