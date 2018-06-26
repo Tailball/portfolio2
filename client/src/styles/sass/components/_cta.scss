@@ -8,9 +8,13 @@
 
     background: linear-gradient(to bottom right, $color-light-trans, $color-light-alt-trans), url('../img/pexels-photo.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
 
+    @media screen and (max-width: 1366px) {
+        background-attachment: scroll;
+    }
+ 
     a {
         color: $color-text-light;
         width: 35vw;

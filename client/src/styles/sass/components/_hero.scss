@@ -14,6 +14,10 @@
     background-position: bottom;
     background-attachment: fixed;
 
+    @media screen and (max-width: 1366px) {
+        background-attachment: scroll;
+    }
+
     overflow: hidden; //required to avoid scrollbars during animation
 
     &__description { 
