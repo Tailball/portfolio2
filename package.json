@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "8.11.2"
+  },
   "bugs": {
     "url": "https://github.com/Tailball/portfolio2/issues"
   },
