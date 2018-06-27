@@ -1,0 +1,129 @@
+.contact {
+    min-height: 100vh;
+
+    color: $color-text-light;
+
+    background: linear-gradient(to bottom, $color-main-trans, $color-dark-trans), url('../img/cable-call-communication-33999.jpg');
+    background-size: cover;
+    background-position: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        display: grid;
+        grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 2fr);
+        grid-row-gap: 3rem;
+        align-items: baseline;
+        margin: 0 5vw;
+    
+        p {
+            grid-column: 1 / 3;
+
+            font-size: $fs-vlarge;
+            font-weight: $fw-thin;
+            letter-spacing: 1.4px;
+            text-align: center;
+            margin-bottom: 5rem;
+
+            @media screen and (max-width: 1024px) {
+                font-size: $fs-large;
+                font-weight: $fw-bold;
+                margin-bottom: 2.5rem;
+            }
+
+            @media screen and (max-width: 545px) {
+            }
+        }
+
+        label, a {
+            font-size: $fs-regular;
+            letter-spacing: 1px;
+            justify-self: end;
+            margin-right: 5rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            label {
+                grid-column: 1 / 3;
+                justify-self: start;
+            }
+
+            input, textarea {
+                grid-column: 1 / 3;    
+                justify-self: stretch;
+            }
+        }
+
+        input,
+        textarea {
+            font-family: $ff-ss;
+            margin: 0;
+            padding: 1rem;
+            background-color: $color-dark-trans-light;
+            color: $color-light;
+
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid $color-dark-trans-light;
+            font-size: $fs-regular;
+            letter-spacing: 1px;
+
+            transition: all .3s ease-in-out;
+        }
+
+        textarea {
+            resize: none;
+            height: 10vh;
+        }
+
+        input:focus, textarea:focus {
+            background-color: transparent;
+            padding: .9rem;
+            border-bottom: 4px solid $color-light;
+        }
+
+
+
+        .controls {
+            grid-column: 2 / 3;
+            justify-self: end;
+
+            a {
+                margin-right: 3rem;
+                color: $color-light;                
+                border-bottom: 2px solid transparent;
+                transition: all .3s;
+
+                &:hover {
+                    color: $color-light-alt;
+                    border-bottom: 2px solid $color-light-alt;
+                }
+            }
+
+            button {
+                justify-self: end;
+
+                background-color: $color-dark-trans-light;
+                color: $color-light;
+
+                font-size: $fs-regular;
+                letter-spacing: 1.2px;
+                padding: 1.5rem 3rem;
+                
+                border: 1px solid transparent;
+                border-radius: .6rem;
+                
+                cursor: pointer;
+
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $color-light;
+                }
+            }
+        }
+    }
+}

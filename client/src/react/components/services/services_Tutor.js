@@ -24,7 +24,8 @@ const Tutor = () => {
         <li>React and Redux</li>
         <li>C# and VB.NET</li>
         <li>Database modeling and SQL code</li>
-        <li>Ms Office software</li>
+        <li>Ms Office software (Excel, Word, Powerpoint, Access)</li>
+        <li>Visual Basic for Applications (VBA)</li>
         <li>Source control (TFS, GIT)</li>
       </ul>
     </div>

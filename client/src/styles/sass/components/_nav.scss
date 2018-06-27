@@ -23,6 +23,7 @@
         margin-top: .3rem; //align baseline with get in touch button
 
         a {
+            border-bottom: 2px solid transparent;
             transition: all .3s;
 
             &:hover {

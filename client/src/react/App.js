@@ -1,22 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import Base from './routes/base';
+import Contact from './routes/contact';
 import NavBar from './components/navbar';
-import Hero from './components/hero';
-import Services from './components/services';
-import Portfolio from './components/portfolio';
-import CTA from './components/cta';
-import About from './components/about';
+
 
 class App extends React.Component {
   render() {
-    return <div className="mainContainer">
-      <NavBar />
-      <Hero />
-      <Services />
-      <CTA />
-      <Portfolio />
-      <About />
-    </div>;
+    return <BrowserRouter>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path="/contact" component={Contact} />
+          <Route path="/" component={Base} />
+        </Switch>
+      </div>
+    </BrowserRouter>;
   }
 }
 

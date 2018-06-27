@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
     return (
         <section className="cta">
-            <a href="#">
+            <Link to="/contact">
                 <h2>Start a project</h2>
                 <p>Interested in working together?<br/>Just click this big button!</p>
-            </a>
+            </Link>
         </section>
     );
 };
