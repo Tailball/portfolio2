@@ -41,6 +41,9 @@ import portfoliofull from "../../styles/img/11_portfolio_full.jpg";
 import oolf from "../../styles/img/12_oolf.jpg";
 import oolffull from "../../styles/img/12_oolf_full.jpg";
 
+import atn from "../../styles/img/13_atn.jpg";
+import atnfull from "../../styles/img/13_atn_full.jpg";
+
 
 class Portfolio extends React.Component {
     constructor() {
@@ -62,6 +65,7 @@ class Portfolio extends React.Component {
                 { src: foriam, width: 2, height: 3 },
                 { src: punkrocknight, width: 2, height: 1 },
                 { src: daily, width: 1, height: 1 },
+                { src: atn, width: 1, height: 1 },
                 { src: portfolio, width: 2, height: 1 },
             ],
             lightboxpics: [
@@ -77,6 +81,7 @@ class Portfolio extends React.Component {
                 { src: foriamfull },
                 { src: punkrocknightfull },
                 { src: dailyfull },
+                { src: atnfull },
                 { src: portfoliofull },
             ]         
         };
