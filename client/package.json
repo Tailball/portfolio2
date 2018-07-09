@@ -9,7 +9,8 @@
     "react-images": "^0.5.17",
     "react-photo-gallery": "^6.0.28",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "scroll-to-element": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
