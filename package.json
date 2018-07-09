@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Tailball/portfolio2#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "express": "^4.16.3"
   },
   "devDependencies": {
