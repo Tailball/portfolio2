@@ -106,7 +106,8 @@ a {
     font-size: 5.3rem;
     margin-top: 7.5vh;
     opacity: .5;
-    animation: flyInBottom .45s ease-out; }
+    animation: flyInBottom .45s ease-out;
+    cursor: pointer; }
 
 @media screen and (max-width: 460px) {
   .hero .hero__description {
