@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const question = req.body.question;
-  console.log(`message to contact: {name} {email}`);
+  console.log(`message to contact: ${name} ${email}`);
 
   //todo verification
 
