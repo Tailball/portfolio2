@@ -2,7 +2,7 @@ const express = require('express');
 const sendgrid = require('@sendgrid/mail');
 const router = express.Router();
 
-const sendGridAPI = "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";
+const sendGridAPI = process.env.SG_API;
 
 router.post('/', (req, res) => {
   const name = req.body.name;
