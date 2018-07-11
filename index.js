@@ -16,11 +16,8 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log('Server is up and running...'));
 
 
-
-try {
-  console.log("keeping alive...");
-  const herokuKeepAliveTime = 1800000; // 30min * 60sec * 1000ms
-  setInterval(() => http.get("http://jochenpanjaergraphics.herokuapp.com"), herokuKeepAliveTime);
-} catch(exc) {
-  console.log(exc.message);
-}
+const herokuKeepAliveTime = 500000; // 8.5min * 60sec * 1000ms
+setInterval(() => {
+  console.log("Keeping alive...");
+  http.get("http://jochenpanjaergraphics.herokuapp.com", () => console.log("http get successfull"));
+}, herokuKeepAliveTime);
