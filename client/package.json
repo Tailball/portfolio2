@@ -9,8 +9,10 @@
     "react-dom": "^16.4.1",
     "react-images": "^0.5.17",
     "react-photo-gallery": "^6.0.28",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
     "scroll-to-element": "^2.0.0"
   },
   "scripts": {

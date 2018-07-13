@@ -1,6 +1,7 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
+import { connect } from 'react-redux';
 
 import moodwood from '../../styles/img/1_moodwood.jpg';
 import moodwoodfull from "../../styles/img/1_moodwood_full.jpg";
@@ -46,8 +47,8 @@ import atnfull from "../../styles/img/13_atn_full.jpg";
 
 
 class Portfolio extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = { 
             currentImage: 0,
@@ -90,6 +91,7 @@ class Portfolio extends React.Component {
         this.openLightbox = this.openLightbox.bind(this);
         this.gotoPrevious = this.gotoPrevious.bind(this);
         this.gotoNext = this.gotoNext.bind(this);
+        this.getTranslation = this.getTranslation.bind(this);
     }
 
     openLightbox(event, obj) {
@@ -117,9 +119,16 @@ class Portfolio extends React.Component {
         });
     }
 
+    getTranslation() {
+        return (
+            this.props.lang === "EN" ?
+            { title: "Here's some of my work" } : { title: "Hier vindt u mijn werk" }
+        );
+    }
+
     render() {
         return <section className="portfolio">
-            <h2>Here's some of my work</h2>
+            <h2>{ this.getTranslation().title }</h2>
 
             <div className="container">
                 <Gallery photos={this.state.portfoliopics}
@@ -136,4 +145,8 @@ class Portfolio extends React.Component {
     };
 }
 
-export default Portfolio;
+const mapStateToProps = (state) => ({
+    lang: state.language
+});
+
+export default connect(mapStateToProps)(Portfolio);

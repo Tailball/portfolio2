@@ -57,6 +57,11 @@
             font-weight: $fw-thin;
             margin-bottom: 1.6rem;
             color: $color-light;
+
+
+            &:last-of-type {
+                margin-top: 2rem;
+            }
         }
 
         ul {

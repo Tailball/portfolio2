@@ -23,6 +23,10 @@ a {
   color: inherit;
   text-decoration: none; }
 
+.link-selected {
+  opacity: .50;
+  text-decoration: underline; }
+
 @media screen and (max-width: 650px) {
   html {
     font-size: 52%; } }
@@ -188,6 +192,8 @@ a {
     font-weight: 300;
     margin-bottom: 1.6rem;
     color: #bddcf0; }
+    .service__me h3:last-of-type {
+      margin-top: 2rem; }
   .service__me ul {
     list-style: none;
     margin: 0;

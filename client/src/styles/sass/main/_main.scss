@@ -28,6 +28,11 @@ a {
   text-decoration: none;
 }
 
+.link-selected {
+  opacity: .50;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 650px) {
   html {
     font-size: 52%;

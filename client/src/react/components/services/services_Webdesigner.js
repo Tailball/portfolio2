@@ -1,7 +1,35 @@
 import React from "react";
+import { connect } from 'react-redux';
 
-const Webdesigner = () => {
-    return <div className="service service__Webdesigner">
+class Webdesigner extends React.Component {
+  constructor(props) {
+    super(props);
+    this.translate = this.translate.bind(this);
+  }
+
+  translate() {
+    return (
+      this.props.lang === "EN" ?
+        {
+          description1: "I design clean, modern looking websites for small businesses.",
+          description2: "I aim for full-responsive design, meaning they will work on big screens, tables and phones.",
+          servicetitle: "I speak fluent",
+          service1: "CSS3 and SASS",
+          service2: "React and Redux",
+        } : 
+        {          
+          description1: "Ik ontwerp propere, moderne websites voor KMO's.",
+          description2: "Ik mik op een volledig responsive design, wat wil zeggen dat ze zowel op grote schermen als tablets en smartphones mooi ogen.",
+          servicetitle: "I spreek vloeiend",
+          service1: "CSS3 en SASS",
+          service2: "React en Redux",
+        }
+    );
+  }
+
+  render () {
+    return (
+      <div className="service service__Webdesigner">
         <div className="service__header">
           <div className="service__header__icon">
             <i className="im im-code" />
@@ -9,7 +37,10 @@ const Webdesigner = () => {
 
           <div className="service__header__description">
             <h2>Webdesigner</h2>
-            <p>I design clean, modern looking websites for small businesses.<br />I aim for full-responsive design, meaning they will work on big screens, tables and phones.</p>
+            <p>
+              { this.translate().description1 }<br />
+              { this.translate().description2 }
+            </p>
           </div>
         </div>
 
@@ -17,13 +48,19 @@ const Webdesigner = () => {
           <h3>I speak fluent</h3>
           <ul>
             <li>HTML5</li>
-            <li>CSS3 and SASS</li>
+            <li>{ this.translate().service1 }</li>
             <li>Javascript ECMA 6</li>
-            <li>React and Redux</li>
+            <li>{ this.translate().service2 }</li>
             <li>jQuery</li>
           </ul>
         </div>
-      </div>;
-};
+      </div>
+    );
+  }
+} 
 
-export default Webdesigner;
+const mapStateToProps = (state) => ({
+  lang: state.language
+});
+
+export default connect(mapStateToProps)(Webdesigner);

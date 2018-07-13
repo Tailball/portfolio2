@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
 class Contact extends React.Component {
     constructor (props){
@@ -14,6 +15,7 @@ class Contact extends React.Component {
 
         this.contact = this.contact.bind(this);
         this.updateField = this.updateField.bind(this);
+        this.getTranslation = this.getTranslation.bind(this);
     }
 
     contact(e) {
@@ -49,13 +51,34 @@ class Contact extends React.Component {
         }                
     }
 
+    getTranslation() {
+        const lang = this.props.lang;
+        return (
+            lang === "EN" ? 
+            {
+                title: "I'm interested in hearing what I can do for you...",
+                name: "Name",
+                question: "Your enquiry",
+                send: "Send",
+                back: "Go back"
+            } : 
+            {
+                title: "Ik hoor graag wat ik voor u kan betekenen...",
+                name: "Naam",
+                question: "Uw vraag",
+                send: "Verstuur",
+                back: "Ga terug"
+            }
+        );
+    }
+
     render(){
         return (
             <section className="contact">
                 <form>
-                    <p>I'm interested in hearing what I can do for you...</p>
+                    <p> { this.getTranslation().title }</p>
 
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">{ this.getTranslation().name }</label>
                     <input type="text" 
                            id="name" 
                            value={this.state.name}
@@ -67,14 +90,14 @@ class Contact extends React.Component {
                            value={this.state.email}
                            onChange={this.updateField} />
 
-                    <label htmlFor="question">Your inquiry</label>
+                    <label htmlFor="question">{ this.getTranslation().question }</label>
                     <textarea id="question" 
                               value={this.state.question}
                               onChange={this.updateField} />
 
                     <div className="controls">
-                        <Link to="/">Go back</Link>
-                        <button onClick={this.contact}>Send</button>
+                        <Link to="/">{ this.getTranslation().back }</Link>
+                        <button onClick={this.contact}>{ this.getTranslation().send }</button>
                     </div>
                 </form>
             </section>
@@ -82,4 +105,8 @@ class Contact extends React.Component {
     } 
 }
 
-export default Contact;
+const mapStateToProps = (state) => ({
+    lang: state.language
+});
+
+export default connect(mapStateToProps)(Contact);
