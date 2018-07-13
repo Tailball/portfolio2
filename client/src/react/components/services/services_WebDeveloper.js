@@ -72,8 +72,8 @@ class WebDeveloper extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({
   lang: state.language  
-};
+});
 
 export default connect(mapStateToProps)(WebDeveloper);

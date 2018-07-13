@@ -502,3 +502,12 @@ a {
         .contact form .controls button:hover {
           background-color: transparent;
           border: 1px solid #bddcf0; }
+    .contact form .messages {
+      grid-column: 2 / 3; }
+      .contact form .messages p {
+        font-size: 1.3rem;
+        font-weight: 700; }
+      .contact form .messages-success p {
+        color: lightgreen; }
+      .contact form .messages-error p {
+        color: lightcoral; }

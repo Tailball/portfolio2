@@ -125,5 +125,26 @@
                 }
             }
         }
+
+        .messages {
+            grid-column: 2 / 3;
+            
+            p {
+                font-size: $fs-small;
+                font-weight: $fw-bold;
+            }
+
+            &-success {
+                p {
+                    color: lightgreen;
+                }
+            }
+
+            &-error {
+                p {
+                    color: lightcoral;
+                }
+            }
+        }
     }
 }
