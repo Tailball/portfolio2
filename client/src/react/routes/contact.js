@@ -132,7 +132,7 @@ class Contact extends React.Component {
                 validationQuestion: "Your question is required. ",
                 validationEmailForm: "Email address is not valid. ",
                 serverSuccess: "Your email was sent correctly!",
-                serverFailure: "Something went wrong on the server. Please contact jochen.panjaer@telenet.be if the problem persists."
+                serverFailure: "Something went wrong on the server. Please contact jochenpanjaergraphics@telenet.be if the problem persists."
             } : 
             {
                 title: "Ik hoor graag wat ik voor u kan betekenen...",
@@ -145,7 +145,7 @@ class Contact extends React.Component {
                 validationQuestion: "Uw vraag is vereist. ",
                 validationEmailForm: "Email is niet geldig. ",
                 serverSuccess: "Uw email werd correct verstuurd!",
-                serverFailure: "Er is een probleem op de server. Contacteer jochen.panjaer@telenet.be als dit probleem zich blijft voordoen."
+                serverFailure: "Er is een probleem op de server. Contacteer jochenpanjaergraphics@telenet.be als dit probleem zich blijft voordoen."
             }
         );
     }

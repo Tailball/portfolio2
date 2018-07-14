@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/', (req, res) => {
     const sendGridAPI = process.env.SG_API;
-    const sendTo = "jochen.panjaer@telenet.be";
+    const sendTo = "jochenpanjaergraphics@telenet.be";
 
     const name = req.body.name;
     const email = req.body.email;
