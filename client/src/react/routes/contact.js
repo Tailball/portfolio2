@@ -25,18 +25,18 @@ class Contact extends React.Component {
 
         let validation = "";
         if(!this.state.name) {
-            validation = "Name is required. ";
+            validation = this.getTranslation().validationName;
         }
         if(!this.state.email) { 
-            validation += "Email is required. ";
+            validation += this.getTranslation().validationEmail;
         } else {
             const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if(!regexEmail.test(this.state.email.toLowerCase())) {
-                validation = "Email address is not valid. ";
+                validation = this.getTranslation().validationEmailForm;
             }
         }
         if(!this.state.question) { 
-            validation += "Your question is required. ";
+            validation += this.getTranslation().validationQuestion;
         }
 
         if(validation){
@@ -57,20 +57,40 @@ class Contact extends React.Component {
                 question: this.state.question
             })
             .then (res => { 
-                console.log(`Has validation errors: ${res.data.hasValidationErrors}`)
+                console.log(res.data.validationErrors);
 
-                    this.setState((prevState, props) => ({
-                        messageIsError: res.data.hasValidationErrors,
-                        message: res.data.hasValidationErrors ? res.data.validationErrors : res.data.status,
-                        name: res.data.hasValidationErrors ? prevState.name : "",
-                        email: res.data.hasValidationErrors ? prevState.email : "",
-                        question: res.data.hasValidationErrors ? prevState.question : ""
-                    }));
-                },
+                let serverValidation = "";
+                for(var i = 0; i < res.data.validationErrors.length; i++) {
+                    switch(res.data.validationErrors[i]){
+                        case "name":
+                            serverValidation += this.getTranslation().validationName;
+                            break;
+                        case "email":
+                            serverValidation += this.getTranslation().validationEmail;
+                            break;
+                        case "emailform":
+                            serverValidation += this.getTranslation().validationEmailForm;
+                            break;
+                        case "question":
+                            serverValidation += this.getTranslation().validationQuestion;
+                            break;
+                    }
+                }
+
+                this.setState((prevState, props) => ({
+                    messageIsError: res.data.hasValidationErrors,
+                    message: res.data.hasValidationErrors ? 
+                                serverValidation : (res.data.status === 1 ? 
+                                                        this.getTranslation().serverSuccess : this.getTranslation().serverFailure),
+                    name: res.data.hasValidationErrors ? prevState.name : "",
+                    email: res.data.hasValidationErrors ? prevState.email : "",
+                    question: res.data.hasValidationErrors ? prevState.question : ""
+                }));
+            },
                 err => { 
                     this.setState({
                         messageIsError: true,
-                        message: "Something went wrong on the server. Please contact jochen.panjaer@telenet.be if the problem persists."
+                        message: this.getTranslation().serverFailure
                     });
                 }
             );
@@ -106,14 +126,26 @@ class Contact extends React.Component {
                 name: "Name",
                 question: "Your enquiry",
                 send: "Send",
-                back: "Go back"
+                back: "Go back",
+                validationName: "Name is required. ",
+                validationEmail: "Email is required. ",
+                validationQuestion: "Your question is required. ",
+                validationEmailForm: "Email address is not valid. ",
+                serverSuccess: "Your email was sent correctly!",
+                serverFailure: "Something went wrong on the server. Please contact jochen.panjaer@telenet.be if the problem persists."
             } : 
             {
                 title: "Ik hoor graag wat ik voor u kan betekenen...",
                 name: "Naam",
                 question: "Uw vraag",
                 send: "Verstuur",
-                back: "Ga terug"
+                back: "Ga terug",
+                validationName: "Naam is vereist. ",
+                validationEmail: "Email is vereist. ",
+                validationQuestion: "Uw vraag is vereist. ",
+                validationEmailForm: "Email is niet geldig. ",
+                serverSuccess: "Uw email werd correct verstuurd!",
+                serverFailure: "Er is een probleem op de server. Contacteer jochen.panjaer@telenet.be als dit probleem zich blijft voordoen."
             }
         );
     }

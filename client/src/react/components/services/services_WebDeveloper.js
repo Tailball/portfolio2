@@ -21,7 +21,7 @@ class WebDeveloper extends React.Component {
           service4: "Automate Excel, Access and even Word!",
         } : 
         {
-          description1: "Ik ben in staat om functionaliteit op uw website of back-end server te implementeren om zo een ware gebruikerservaring te creeëren.",
+          description1: "Ik ben in staat om functionaliteit op uw website of back-end server te implementeren om zo een ware gebruikerservaring te creëren.",
           description2: "Ik kan u ook helpen met Office automatisatie.",
           servicetitle: "Ik kan volgende implementeren",
           service1: "MongoDB en Mongoose",

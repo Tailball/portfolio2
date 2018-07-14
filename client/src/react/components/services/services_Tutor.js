@@ -23,10 +23,10 @@ class Tutor extends React.Component {
           service7: "Database modeling and SQL code",
         } : 
         {          
-          title: "Opleiding",
+          title: "Training",
           description1: "Ik kan individuele studenten of kleine groepen verscheidene aspecten van programmeer principes en webdesign bijbrengen",
           servicetitle: "Ik kan mijn kennis delen van",
-          service1: "Basis en geanvanceerde programmer principes",
+          service1: "Basis en geavanceerde programmeer principes",
           service2: "OOP en SOLID filosofieën",
           service3: "HTML5, CSS3 met SASS",
           service4: "Node.js, NPM en Express",

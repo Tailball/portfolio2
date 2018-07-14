@@ -27,7 +27,7 @@ class Hero extends React.Component {
                 ido: "I make graphics and websites for small businesses."
             } : 
             {
-                hello: "Ik ben Jochen, Belgische freelance ontwikkelaar.",
+                hello: "Mijn naam is Jochen, een freelancer uit België.",
                 ido: "Ik ontwerp afbeeldingen en websites voor KMO's."
             }
         );

@@ -35,7 +35,7 @@ class About extends React.Component {
         about1: "Ik ben een jonge 30-jarige mannelijke Belg.",
         about2: "Ik hou van pizza, katten (en honden) en video games.",
         about3: "Naast longboarden en muziek maken met mijn punkrock band,",
-        about4: " werk ik graag aan grafisch ontwerp en web development.",
+        about4: " werk ik graag aan grafisch ontwerp en web development",
         about5: "Professioneel gesproken, ben ik een ",
         about6: "zelfverzekerde freelance web developer",
         about7: " en ",
@@ -48,7 +48,7 @@ class About extends React.Component {
         about14: "Indien u vragen, opmerkingen of opbouwende kritiek heeft, ",
         about15: "contacteer mij",
         about16: ", aub. Ik hoor graag terug van u!",
-        footer: "copyright 2018 - all code van mezelf.",
+        footer: "copyright 2018 - alle code door mezelf.",
         contact: "contacteer mij"
       }
     );

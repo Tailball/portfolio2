@@ -18,7 +18,7 @@ class GfxDesigner extends React.Component {
         servicetitle: "I am confident with"
       } : 
       {
-        description1: "Logos of businesscards voor een professioneel bedrijf...",
+        description1: "Logo's of businesscards voor een professioneel bedrijf...",
         description2: "Posters of flyers voor uw volgende evenement...",
         description3: "Ik kan u ondersteunen met alles wat u gevisualiseerd wil hebben.",
         servicetitle: "Ik ben zelfverzekerd met"

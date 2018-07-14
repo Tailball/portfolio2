@@ -12,7 +12,7 @@ class Webdesigner extends React.Component {
       this.props.lang === "EN" ?
         {
           description1: "I design clean, modern looking websites for small businesses.",
-          description2: "I aim for full-responsive design, meaning they will work on big screens, tables and phones.",
+          description2: "I aim for full-responsive design, meaning they will work on big screens, tablets and phones.",
           servicetitle: "I speak fluent",
           service1: "CSS3 and SASS",
           service2: "React and Redux",
@@ -45,7 +45,7 @@ class Webdesigner extends React.Component {
         </div>
 
         <div className="service__me">
-          <h3>I speak fluent</h3>
+          <h3>{ this.translate().servicetitle }</h3>
           <ul>
             <li>HTML5</li>
             <li>{ this.translate().service1 }</li>
