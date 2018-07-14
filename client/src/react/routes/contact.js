@@ -57,23 +57,23 @@ class Contact extends React.Component {
                 question: this.state.question
             })
             .then (res => { 
-                console.log(res.data.validationErrors);
-
                 let serverValidation = "";
-                for(var i = 0; i < res.data.validationErrors.length; i++) {
-                    switch(res.data.validationErrors[i]){
-                        case "name":
-                            serverValidation += this.getTranslation().validationName;
-                            break;
-                        case "email":
-                            serverValidation += this.getTranslation().validationEmail;
-                            break;
-                        case "emailform":
-                            serverValidation += this.getTranslation().validationEmailForm;
-                            break;
-                        case "question":
-                            serverValidation += this.getTranslation().validationQuestion;
-                            break;
+                if(res.data.validationErrors) {
+                    for(var i = 0; i < res.data.validationErrors.length; i++) {
+                        switch(res.data.validationErrors[i]){
+                            case "name":
+                                serverValidation += this.getTranslation().validationName;
+                                break;
+                            case "email":
+                                serverValidation += this.getTranslation().validationEmail;
+                                break;
+                            case "emailform":
+                                serverValidation += this.getTranslation().validationEmailForm;
+                                break;
+                            case "question":
+                                serverValidation += this.getTranslation().validationQuestion;
+                                break;
+                        }
                     }
                 }
 
