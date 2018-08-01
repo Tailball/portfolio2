@@ -58,6 +58,7 @@ class WebDeveloper extends React.Component {
             <li>{ this.translate().service1 }</li>
             <li>SQL server</li>
             <li>Heroku deployment</li>
+            <li>Wordpress</li>
           </ul>
 
           <h3>{ this.translate().servicetitle2 }</h3>

@@ -50,6 +50,7 @@ class GfxDesigner extends React.Component {
             <li>Adobe Photoshop</li>
             <li>Adobe Illustrator</li>
             <li>Adobe Indesign</li>
+            <li>Adobe XD</li>
             <li>Cyberlink Powerdirector</li>
           </ul>
         </div>
