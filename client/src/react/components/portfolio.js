@@ -48,6 +48,14 @@ import atnfull from '../../styles/img/13_atn_full.jpg';
 import businesscards from '../../styles/img/14_businesscards.jpg';
 import businesscardsfull from '../../styles/img/14_businesscards_full.jpg';
 
+import lftsrelease from '../../styles/img/15_lftsrelease.jpg';
+import lftsreleasefull from '../../styles/img/15_lftsrelease_full.jpg';
+
+import lftsuk from '../../styles/img/15_lfsuk.jpg';
+import lftsukfull from '../../styles/img/15_lfsuk_full.jpg';
+
+import iknowyouknow from '../../styles/img/16_iknowyouknow.jpg';
+import inknowyouknowfull from '../../styles/img/16_iknowyouknow_full.jpg';
 
 class Portfolio extends React.Component {
     constructor(props) {
@@ -60,19 +68,24 @@ class Portfolio extends React.Component {
                 { src: punklives, width: 2, height: 3 },
                 { src: businesscards, width: 1, height: 1 },
                 { src: elephant, width: 2, height: 3 },
-                { src: punkrockbrawl, width: 2, height: 1 },
+                { src: punkrockbrawl, width: 1, height: 1 },
                 { src: rumspringa, width: 1, height: 1 },
                 { src: cremekarfest, width: 3, height: 2 },                
+                
                 { src: punkrocknight2, width: 2, height: 3 },
                 { src: pennywasright, width: 1, height: 1 },
-                { src: moodwood, width: 1, height: 1 },
+                { src: iknowyouknow, width: 1, height: 1},
                 { src: foriam, width: 2, height: 3 },
                 { src: daily, width: 1, height: 1 },
                 { src: oolf, width: 1, height: 1 },
+                
+                { src: lftsrelease, width: 2, height: 3 },
                 { src: punkrocknight, width: 2, height: 1 },
                 { src: atn, width: 1, height: 1 },
+                { src: moodwood, width: 1, height: 1 },
+                { src: lftsuk, width: 2, height: 3 },
                 { src: portfolio, width: 1, height: 1 },
-            ],
+            ], 
             lightboxpics: [
                 { src: punklivesfull },
                 { src: businesscardsfull },
@@ -80,14 +93,19 @@ class Portfolio extends React.Component {
                 { src: punkrockbrawlfull },
                 { src: rumspringafull },
                 { src: cremekarfestfull },                
+                
                 { src: punkrocknight2full },
                 { src: pennywasrightfull },
-                { src: moodwoodfull },               
+                { src: inknowyouknowfull },
                 { src: foriamfull },
                 { src: dailyfull },
                 { src: oolffull },
+                
+                { src: lftsreleasefull },
                 { src: punkrocknightfull },
                 { src: atnfull },
+                { src: moodwoodfull },               
+                { src: lftsukfull },
                 { src: portfoliofull },
             ]         
         };
@@ -138,7 +156,7 @@ class Portfolio extends React.Component {
             <div className="container">
                 <Gallery photos={this.state.portfoliopics}
                     onClick={this.openLightbox}
-                    columns={5} />
+                    columns={6} />
                 <Lightbox images={this.state.lightboxpics}
                     currentImage={this.state.currentImage}
                     isOpen={this.state.lightboxIsOpen}
