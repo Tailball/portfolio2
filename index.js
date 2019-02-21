@@ -7,9 +7,10 @@ const contact = require('./routes/contact');
 
 app.use(log);
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded( { extended: false }));
 
 app.use('/api/contact', contact);
+app.use('/templates/portfoliocard', express.static('templates/portfolio_card'));
 app.use('/', express.static('client/build'));
 
 const port = process.env.PORT || 5000;
