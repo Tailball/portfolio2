@@ -75,7 +75,7 @@ body {
 @media screen and (max-width: 685px) {
   body {
     min-height: 100vh;
-    max-height: auto;
+    height: auto;
     font-size: 0.8em;
   }
 
