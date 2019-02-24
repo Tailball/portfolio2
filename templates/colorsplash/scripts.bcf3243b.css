@@ -121,6 +121,12 @@ nav ul li a:hover {
     font-size: 32px;
   }
 }
+@media screen and (max-width: 1035px) {
+  .content > h1 {
+    font-size: 32px;
+    width: 48%;
+  }
+}
 @media screen and (max-width: 950px) {
   .content > h1 {
     width: 50%;
