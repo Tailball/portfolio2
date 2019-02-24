@@ -10,7 +10,10 @@ app.use(express.json());
 app.use(express.urlencoded( { extended: false }));
 
 app.use('/api/contact', contact);
+
 app.use('/templates/portfoliocard', express.static('templates/portfolio_card'));
+app.use('/templates/colorsplash', express.static('templates/colorsplash'));
+
 app.use('/', express.static('client/build'));
 
 const port = process.env.PORT || 5000;
