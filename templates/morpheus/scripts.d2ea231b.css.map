@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/_main.scss"],"names":[],"mappings":"AAAA,KACI","file":"scripts.d2ea231b.css","sourceRoot":"..","sourcesContent":["body {\n    background-color: $c-bg;\n}"]}

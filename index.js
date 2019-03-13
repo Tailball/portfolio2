@@ -12,12 +12,13 @@ app.use(express.urlencoded( { extended: false }));
 app.use('/api/contact', contact);
 
 app.get('/templates', (req, res) => {
-  res.send('portfoliocard | colorsplash | longboard');
+  res.send('portfoliocard | colorsplash | longboard | morpheus');
 });
 
 app.use('/templates/portfoliocard', express.static('templates/portfolio_card'));
 app.use('/templates/colorsplash', express.static('templates/colorsplash'));
 app.use('/templates/longboard', express.static('templates/longboardpage'));
+app.use('/templates/morpheus', express.static('templates/morpheus'));
 
 app.use('/', express.static('client/build'));
 
